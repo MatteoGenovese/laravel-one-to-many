@@ -19,7 +19,7 @@
                     @forelse ($posts as $post)
                         <tr>
                             <th scope="row">{{ $post->id }}</th>
-                            <td>{{ $post->author }}</td>
+                            <td>{{ $post->user_id }}</td>
                             <td>{{ $post->title }}</td>
                             <td>
                                 <a href="{{ route('admin.posts.show', $post->id) }}" class="btn btn-sm btn-success">
