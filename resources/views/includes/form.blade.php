@@ -7,6 +7,7 @@
     <input type="text" class="form-control" id="author"  placeholder="Enter author" name="author" value="{{ old('author', $post->author) }}">
 </div>
 
+
 @php
 $newDate = explode(' ', $post->post_date);
 @endphp

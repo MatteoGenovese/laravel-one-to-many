@@ -11,6 +11,7 @@
                     <tr>
                         <th scope="col">id</th>
                         <th scope="col">Author</th>
+                        <th scope="col">Category</th>
                         <th scope="col">Title</th>
                         <th scope="col"></th>
                     </tr>
@@ -19,7 +20,8 @@
                     @forelse ($posts as $post)
                         <tr>
                             <th scope="row">{{ $post->id }}</th>
-                            <td>{{ $post->user_id }}</td>
+                            <td>{{ $post->user->name }}</td>
+                            <td>{{ $post->category->name }}</td>
                             <td>{{ $post->title }}</td>
                             <td>
                                 <a href="{{ route('admin.posts.show', $post->id) }}" class="btn btn-sm btn-success">
